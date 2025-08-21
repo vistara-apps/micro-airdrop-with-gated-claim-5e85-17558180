@@ -1,16 +1,24 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(request: NextRequest) {
-  const body = await request.json();
-  const { address, amount } = body;
-
-  // Mock claim logic
-  await new Promise(resolve => setTimeout(resolve, 1000));
-
-  return NextResponse.json({
-    success: true,
-    txHash: "0x" + Math.random().toString(16).substr(2, 64),
-    amount,
-    address,
-  });
+  try {
+    const { address, amount } = await request.json();
+    
+    // Mock claim transaction
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    const txHash = "0x" + Math.random().toString(16).substr(2, 64);
+    
+    return NextResponse.json({
+      success: true,
+      txHash,
+      amount,
+      timestamp: new Date().toISOString()
+    });
+  } catch (error) {
+    return NextResponse.json(
+      { error: 'Failed to process claim' },
+      { status: 500 }
+    );
+  }
 }

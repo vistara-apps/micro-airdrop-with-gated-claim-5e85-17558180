@@ -1,20 +1,26 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(request: NextRequest) {
-  // Mock airdrop statistics
-  const mockStats = {
-    totalClaimed: "12,450",
-    totalUsers: "8,234",
-    totalDistributed: "1,245,000",
-    claimRate: "68",
-    timeRemaining: "5d 12h 30m",
-    recentActivity: [
-      { user: "0x1234...5678", amount: "100", time: "2m ago" },
-      { user: "0x9876...5432", amount: "150", time: "5m ago" },
-      { user: "0x4567...8901", amount: "75", time: "8m ago" },
-      { user: "0x2345...6789", amount: "200", time: "12m ago" },
-    ]
-  };
+  try {
+    // Mock airdrop statistics
+    const stats = {
+      totalClaimed: Math.floor(Math.random() * 10000) + 5000,
+      totalUsers: Math.floor(Math.random() * 1000) + 500,
+      totalDistributed: Math.floor(Math.random() * 1000000) + 500000,
+      claimRate: Math.floor(Math.random() * 30) + 60,
+      timeRemaining: "5 days 12 hours",
+      recentActivity: Array.from({ length: 5 }, () => ({
+        address: "0x" + Math.random().toString(16).substr(2, 8),
+        amount: Math.floor(Math.random() * 500) + 100,
+        timestamp: new Date(Date.now() - Math.random() * 3600000).toISOString()
+      }))
+    };
 
-  return NextResponse.json(mockStats);
+    return NextResponse.json(stats);
+  } catch (error) {
+    return NextResponse.json(
+      { error: 'Failed to fetch stats' },
+      { status: 500 }
+    );
+  }
 }
