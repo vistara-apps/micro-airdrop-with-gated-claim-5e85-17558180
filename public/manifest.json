@@ -1,0 +1,14 @@
+{
+  "name": "Airdrop Forge",
+  "description": "Airdrop Forge is a Base Mini App built with Zara.",
+  "image": "https://dummyimage.com/1200x628/0a0b0d/ffffff.png&text=OG",
+  "external_url": "https://5e85bd7a-6093-4948-a9bd-793a3c760d42.vistara.dev",
+  "properties": {
+    "app": {
+      "name": "Airdrop Forge",
+      "description": "Airdrop Forge is a Base Mini App built with Zara.",
+      "url": "https://5e85bd7a-6093-4948-a9bd-793a3c760d42.vistara.dev",
+      "icon": "https://0co.to/images/zara-2.png"
+    }
+  }
+}
