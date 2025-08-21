@@ -10,7 +10,7 @@
     "subtitle": "Built with Zara",
     "description": "Airdrop Forge is a Base Mini App built with Zara.",
     "iconUrl": "https://0co.to/images/zara-2.png",
-    "homeUrl": "https://5e85bd7a60934948a9bd793a3c760d42-pr9v-7agix5ut5-vistara.vercel.app",
+    "homeUrl": "https://5e85bd7a60934948a9bd793a3c760d42-ptcx-43nsgz9ti-vistara.vercel.app",
     "splashImageUrl": "https://5e85bd7a60934948a9bd793a3c760d42-pr9v-7agix5ut5-vistara.vercel.app/splash.png",
     "splashBackgroundColor": "#000000",
     "heroImageUrl": "https://5e85bd7a60934948a9bd793a3c760d42-pr9v-7agix5ut5-vistara.vercel.app/image.png",
@@ -25,6 +25,6 @@
       "miniapp",
       "onchainkit"
     ],
-    "webhookUrl": "https://5e85bd7a60934948a9bd793a3c760d42-pr9v-7agix5ut5-vistara.vercel.app/api/webhook"
+    "webhookUrl": "https://5e85bd7a60934948a9bd793a3c760d42-ptcx-43nsgz9ti-vistara.vercel.app/api/webhook"
   }
 }
